@@ -1,0 +1,57 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos del body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #24B324;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Navegación */
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Iconos */
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icons a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Hace los íconos blancos */
+  }
+  
