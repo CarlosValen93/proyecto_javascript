@@ -18,7 +18,7 @@
   }
   
  
-  .header .container {
+.container {
     max-width: 1200px; 
     margin: 0 auto; 
     display: flex;
@@ -61,15 +61,39 @@
     color: white;
   }
 
+ 
+  .botones {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente los botones */
+    gap: 20px; /* Espacio entre los botones */
+    margin: 20px; /* Espacio arriba y abajo del contenedor */
+  }
+  
+  .botones button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .botones button:hover {
+    background-color: #218838;
+  }
+  
 #productos .grid {
+  margin-top: 0px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px; 
     justify-content: center;
     padding: 20px;
   }
 
-  .producto-card {
+  .cartaproducto {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -77,32 +101,55 @@
     text-align: center;
     padding: 10px;
     transition: transform 0.2s ease-in-out;
+    margin-bottom: auto;
   }
   
-  .producto-card:hover {
+  .cartaproducto:hover {
     transform: scale(1.05); 
   }
   
-  .producto-card img {
+  .cartaproducto img {
     width: 100%;
     height: auto;
   }
   
-  .producto-card h3 {
+  .cartaproducto h3 {
     font-size: 1.2em;
     margin: 10px 0;
   }
   
-  .producto-card p {
-    font-size: 1em;
-    color: #555;
+  .cartaproducto p {
+    height: 50px; /* Ajusta este valor según el espacio deseado */
+    /* Oculta cualquier texto que exceda la altura */
+    text-overflow: ellipsis; /* Añade "..." al final del texto cortado */
+    display: -webkit-box; /* Requerido para el truncado multilineal */
+    -webkit-line-clamp: 3; /* Número de líneas visibles */
+    -webkit-box-orient: vertical; /* Configuración para truncado */
+    word-wrap: break-word; /* Permite saltos de línea en palabras largas */
   }
   
-  .producto-card .precio {
+  .cartaproducto .precio {
     font-size: 1.1em;
     font-weight: bold;
     color: #27ae60;
     margin: 10px 0;
-  }
   
+ }
+
+ .botonagregar {
+   background-color: #28a745;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   padding: 10px 15px;
+   font-size: 16px;
+   cursor: pointer;
+ 
+ }
+
+ .botonagregar:hover {
+   background-color: #218838;
+ }
+
+
   
