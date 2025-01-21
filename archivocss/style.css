@@ -64,9 +64,9 @@
  
   .botones {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente los botones */
-    gap: 20px; /* Espacio entre los botones */
-    margin: 20px; /* Espacio arriba y abajo del contenedor */
+    justify-content: center; 
+    gap: 20px; 
+    margin: 20px; 
   }
   
   .botones button {
@@ -102,16 +102,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    position: relative; /* Necesario para que el z-index funcione */
+    position: relative; 
     z-index: 10;
     padding: 10px;
     transition: transform 0.2s ease-in-out;
-    margin-bottom: 10px; /* Margen inferior uniforme */
-    height: auto; /* Ajuste automático para mantener contenido dinámico */
-    display: flex; /* Flexbox para alinear contenido */
-    flex-direction: column; /* Asegura que los elementos estén en columna */
-    justify-content: space-between; /* Distribuye espacio */
-}
+    margin-bottom: 10px; 
+    height: auto;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
 .cartaproducto:hover {
   transform: scale(1.05);
 }
@@ -129,14 +129,14 @@
 
 .cartaproducto p {
     height: auto;
-    margin: 10px 0; /* Margen uniforme */
+    margin: 10px 0; 
 }
 
 .cartaproducto .precio {
     font-size: 1.1em;
     font-weight: bold;
     color: #27ae60;
-    margin: 10px 0; /* Margen uniforme */
+    margin: 10px 0;
 }
 
 
@@ -148,8 +148,8 @@
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: auto; /* Empuja el botón hacia el final */
-    margin-bottom: 10px; /* Margen inferior */
+    margin-top: auto;
+    margin-bottom: 10px; 
 }
 
 .botonagregar:hover {
@@ -171,7 +171,7 @@
 }
 
 .agregarAlCarritoDeCompras div {
-  margin-bottom: 10px; /* Espacio entre elementos */
+  margin-bottom: 10px; 
   padding: 5px;
 }
 
@@ -193,7 +193,7 @@
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
-  margin: 5px 5px 0 0; /* Espaciado entre botones */
+  margin: 5px 5px 0 0;
   cursor: pointer;
   font-size: 0.9em;
 }
