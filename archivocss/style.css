@@ -7,19 +7,12 @@
   
 
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
-  }
   
-
-  .header {
-    background-color: #24B324;
-    padding: 10px 0;
   }
-  
- 
-.container {
-    max-width: 1200px; 
+  .container {
+    max-width: 900px; 
     margin: 0 auto; 
     display: flex;
     justify-content: space-between; 
@@ -27,6 +20,15 @@
     padding: 0 20px; 
   }
   
+  
+/* ESTO SON LAS CLASES DEL HEADER*/
+  .header {
+    background-color: #24B324;
+    padding: 10px 0;
+  }
+  
+ 
+
  
   .mitienda{
     font-size: 1.5em;
@@ -43,7 +45,8 @@
   .nav a {
     color: white;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
   }
   
   .nav a:hover {
@@ -54,6 +57,9 @@
   .iconos {
     display: flex;
     gap: 15px; 
+  }
+  .fa-cart-shopping {
+    cursor: pointer; 
   }
   
   .iconos i {
@@ -68,9 +74,10 @@
     gap: 20px; 
     margin: 20px; 
   }
-  
+  /* botones de paginacion */
   .botones button {
-    background-color: #28a745;
+    background-color: #24B324;
+    font-weight: bold;
     color: white;
     border: none;
     border-radius: 5px;
@@ -81,7 +88,7 @@
   }
   
   .botones button:hover {
-    background-color: #218838;
+    background-color: #24B324;
   }
   
 #productos .grid {
@@ -89,17 +96,18 @@
   margin-top: 0px;
  
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px; 
     justify-content: center;
     padding: 20px;
   }
-
+/* ESTO ES LA CLASE DE CADA CARTA DE LA PLANTA*/
   .cartaproducto {
    
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.8rem;
     overflow: hidden;
     text-align: center;
     position: relative; 
@@ -135,13 +143,13 @@
 .cartaproducto .precio {
     font-size: 1.1em;
     font-weight: bold;
-    color: #27ae60;
+    color:#24B324;
     margin: 10px 0;
 }
-
+/* ESTO ES EL BOTON DE AGREGAR AL CARRITO DE CADA PLANTA*/
 
 .botonagregar {
-    background-color: #28a745;
+    background-color: #24B324;
     color: white;
     border: none;
     border-radius: 5px;
@@ -150,24 +158,35 @@
     cursor: pointer;
     margin-top: auto;
     margin-bottom: 10px; 
+    transition: 0.3s;
 }
 
 .botonagregar:hover {
-    background-color: #218838;
+  background-color: white;
+  color: #24B324;
+  border-color: #24B324;
+  box-shadow: 0 0 10px#24B324;
 }
+
+/* ESTO ES LA CLASE DE LOS ESTILOS DEL CARRITO*/
 .agregarAlCarritoDeCompras {
+  display: none;
   position: fixed;
   top: 20px;
   left: 20px;
   width: 300px;
-  background-color: #28a745;
+  background-color: white;
   border: 1px solid #ddd;
+
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   max-height: 80vh;
   overflow-y: auto;
+}
+.agregarAlCarritoDeCompras .ver {
+  display: block; 
 }
 
 .agregarAlCarritoDeCompras div {
@@ -178,17 +197,31 @@
 .agregarAlCarritoDeCompras h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
+  color: black;
+}
+.agregarAlCarritoDeCompras .botonrojo{
+  background-color: tomato;
   color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 .agregarAlCarritoDeCompras p {
-  font-size: 1em;
+  font-size: 0.8rem;
   margin: 5px 0;
-  color: white;
+  color: black;
+  border-bottom: 1px solid gray;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
-
+.agregarAlCarritoDeCompras .precioTotal{
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+}
 .agregarAlCarritoDeCompras button {
-  background-color: #28a745;
+  background-color: #24B324;
   color: white;
   border: none;
   border-radius: 5px;
@@ -196,9 +229,25 @@
   margin: 5px 5px 0 0;
   cursor: pointer;
   font-size: 0.9em;
+ 
 }
 
 .agregarAlCarritoDeCompras button:hover {
-  background-color: #218838;
+  background-color: white;
+  color: gray;
 }
+/* ESTO ES EL FOOTER */
 
+footer {
+  background-color: #24B324;
+  color: white;
+
+  text-align: center;
+  
+}
+footer .container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  
+}

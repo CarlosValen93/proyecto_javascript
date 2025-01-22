@@ -3,11 +3,14 @@
 const sectionGrid = document.querySelector('#productos .grid'); 
 const botonesPaginacion = document.querySelectorAll('.botones button');
 const divAgregarAlCarrito = document.querySelector('.agregarAlCarritoDeCompras');
+const iconoCarrito = document.querySelector(".fa-cart-shopping");
+
 
 
 const carrito = []; 
+
 function agregarAlCarrito(producto) {
-  console.log("Producto agregado al carrito:", producto);
+
 
   
   const productoEnCarrito = carrito.find(item => item.id === producto.id);
@@ -25,12 +28,13 @@ function agregarAlCarrito(producto) {
     });
     
   }
+   divAgregarAlCarrito.style.display = "block"
 
   
-  renderizarCarrito();
+  convertirCarrito();
 }
 
-function renderizarCarrito() {
+function  convertirCarrito() {
 
   divAgregarAlCarrito.innerHTML = "";
 
@@ -51,24 +55,66 @@ let total = 0;
     pPlantas.textContent = `${producto.nombre} - Cantidad: ${producto.cantidad}`;
 
     const pPrecio = document.createElement("p");
-    pPrecio.textContent = `Precio: ${(producto.precio * producto.cantidad)} €`;
+    pPrecio.textContent = `Precio: ${(producto.precio * producto.cantidad).toFixed(2)} €`;
+
 
     total += producto.precio * producto.cantidad;
 
     const butEliminar = document.createElement("button");
+    butEliminar.classList.add("botonrojo");
     butEliminar.textContent = "Eliminar";
-    butEliminar.addEventListener("click", () => eliminarDelCarrito(producto.id));
+    butEliminar.addEventListener(("click"), () => eliminarDelCarrito(producto.id));
+    const butMas = document.createElement("button");
+    butMas.classList.add("botonrojo");
+    butMas.textContent = "+";
+    butMas.addEventListener(("click"), () => sumarPlanta(producto.id));
+    const butMenos = document.createElement("button");
+    butMenos.classList.add("botonrojo");
+    butMenos.textContent = "-";
+    butMenos.addEventListener(("click"), () => restarPlanta(producto.id));
 
-    div.append(pPlantas, pPrecio, butEliminar);
+    
+
+
+    div.append(pPlantas, pPrecio, butEliminar, butMas, butMenos);
+    
+
     divAgregarAlCarrito.appendChild(div);
+
   });
 
 
   const pTotal = document.createElement("p");
+  pTotal.classList.add("precioTotal");
   pTotal.textContent = `Total: ${total.toFixed(2)} €`;
   divAgregarAlCarrito.appendChild(pTotal);
-}
 
+
+
+  const butVaciarCarrito= document.createElement("button");
+
+    butVaciarCarrito.textContent = 'Vaciar carrito'
+    butVaciarCarrito.addEventListener("click", () => {carrito.length = 0;
+
+      convertirCarrito(); 
+  });
+  
+  
+    
+    
+    const butProcederPago= document.createElement("button");
+    butProcederPago.textContent = 'Proceder al pago'
+    butProcederPago.addEventListener("click", () => { 
+      if (carrito.length > 0) {
+          alert('¡Compra realizada con éxito!');
+      } else {
+          alert('Necesitas seleccionar al menos un producto para proceder al pago.');
+      }
+  });
+    divAgregarAlCarrito.append(butVaciarCarrito, butProcederPago);
+    
+}
+//--------------------------------------------------------------------
 function eliminarDelCarrito(id) {
   
   const index = carrito.findIndex(producto => producto.id === id);
@@ -76,14 +122,50 @@ function eliminarDelCarrito(id) {
     carrito.splice(index, 1);
   }
 
+
   
-  renderizarCarrito();
+  convertirCarrito();
+}
+//--------------------------------------------------------------------
+function sumarPlanta(id) {
+  // Buscar el producto en el carrito por su id
+  const producto = carrito.find(producto => producto.id === id);
+  
+  // Incrementar la cantidad si el producto existe
+  if (producto) {
+    producto.cantidad += 1;
+  }
+
+  // Actualizar la visualización del carrito
+  convertirCarrito();
+}
+
+function restarPlanta(id) {
+  // Buscar el producto en el carrito por su id
+  const producto = carrito.find(producto => producto.id === id);
+  
+  // Reducir la cantidad si es mayor que 0
+  if (producto && producto.cantidad > 0) {
+    producto.cantidad -= 1;
+    
+    // Si la cantidad llega a 0, eliminar el producto del carrito (opcional)
+    if (producto.cantidad === 0) {
+      const index = carrito.findIndex(prod => prod.id === id);
+      carrito.splice(index, 1);
+    }
+  }
+
+  // Actualizar la visualización del carrito
+  convertirCarrito();
 }
 
 
 
 
 
+
+
+//--------------------------------------------------------------------
 
 
 
@@ -105,12 +187,12 @@ function goToPage(event) {
     }
   }
 }
-
+//--------------------------------------------------------------------
 
 botonesPaginacion.forEach(button => button.addEventListener('click', goToPage));
 
 
-
+//--------------------------------------------------------------------
 
 function printOneProducto(producto, dom) {
     const article = document.createElement('article');
@@ -129,14 +211,13 @@ function printOneProducto(producto, dom) {
   
     const span = document.createElement('p');
     span.classList.add('precio');
-    span.textContent = `Precio: ${producto.precio}`;
+    span.textContent = `Precio: ${producto.precio} €`;
     
     const button = document.createElement('button');
     button.classList.add('botonagregar');
     button.textContent = 'Agregar al carrito';
     button.addEventListener('click', () => {
-      console.log("Botón clicado, ejecutando agregarAlCarrito.");
-      agregarAlCarrito(producto);
+     agregarAlCarrito(producto);
     });
   
     figure.appendChild(img);
@@ -150,6 +231,16 @@ function printOneProducto(producto, dom) {
    
     list.forEach(producto => printOneProducto(producto, dom));
   }
+  iconoCarrito.addEventListener("click", () => {
+    // Mostramos el carrito si está oculto o lo actualizamos si ya está visible
+    if (divAgregarAlCarrito.style.display === "none" || divAgregarAlCarrito.style.display === "") {
+        divAgregarAlCarrito.style.display = "block"; // Mostrar carrito
+        convertirCarrito(); // Renderizar el contenido
+    } else {
+        divAgregarAlCarrito.style.display = "none"; // Ocultar carrito
+    }
+  });
+  
   function init(list) {
    
     botonesPaginacion[0].dataset.object = "1"; 
@@ -157,5 +248,7 @@ function printOneProducto(producto, dom) {
   
     printAllProductos(list, sectionGrid);
   }
+
   init(productos1)
+  
   
