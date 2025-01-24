@@ -1,7 +1,7 @@
 const productos1 = [
   {
     id: 1,
-    nombre: "Planta de Interior",
+    nombre: "Planta Interior",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/10093/10093154_1.jpg?12-11-2024",
     descripcion: "Resistente, ideal para interiores, muy fácil de cuidar.",
     precio: 15.99,
@@ -17,7 +17,7 @@ const productos1 = [
   },
   {
     id: 3,
-    nombre: "Ficus Elástica",
+    nombre: "Ficus Elegante",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/10089/10089246_1.jpg?12-06-2023",
     descripcion: "Planta interior resistente, grande y con mucho estilo.",
     precio: 29.50,
@@ -33,7 +33,7 @@ const productos1 = [
   },
   {
     id: 5,
-    nombre: "Palmera Kentia",
+    nombre: "Palmera Tropical",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Planta tropical decorativa, perfecta para interiores grandes.",
     precio: 25.00,
@@ -41,7 +41,7 @@ const productos1 = [
   },
   {
     id: 6,
-    nombre: "Planta suculenta",
+    nombre: "Planta Suculenta",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/10093/10093154_1.jpg?12-11-2024",
     descripcion: "Compacta y resistente, ideal para interiores pequeños modernos.",
     precio: 10.00,
@@ -49,7 +49,7 @@ const productos1 = [
   },
   {
     id: 7,
-    nombre: "Monstera Deliciosa",
+    nombre: "Monstera Gigante",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Hojas grandes decorativas, ideal para interiores tropicales modernos.",
     precio: 35.00,
@@ -57,7 +57,7 @@ const productos1 = [
   },
   {
     id: 8,
-    nombre: "Aloe Vera",
+    nombre: "Planta Medicinal",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/10089/10089246_1.jpg?12-06-2023",
     descripcion: "Planta medicinal fácil de cuidar, ideal para interiores frescos.",
     precio: 14.99,
@@ -65,7 +65,7 @@ const productos1 = [
   },
   {
     id: 9,
-    nombre: "Lirio de Paz",
+    nombre: "Flor de Luna",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11249/11249539_1.jpg?20-08-2024",
     descripcion: "Planta elegante con flores blancas, perfecta para interiores.",
     precio: 18.00,
@@ -73,7 +73,7 @@ const productos1 = [
   },
   {
     id: 10,
-    nombre: "Helecho",
+    nombre: "Helecho Grande",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Planta frondosa ideal para ambientes húmedos y sombreados.",
     precio: 20.00,
@@ -89,7 +89,7 @@ const productos1 = [
   },
   {
     id: 12,
-    nombre: "Palma Areca",
+    nombre: "Palma Elegante",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Planta elegante con hojas largas, ideal para interiores amplios.",
     precio: 26.00,
@@ -108,7 +108,7 @@ const productos2 = [
   },
   {
     id: 14,
-    nombre: "Bambú de la Suerte",
+    nombre: "Bambu de la Suerte",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Planta de buena suerte, perfecta para interiores decorativos.",
     precio: 22.50,
@@ -116,7 +116,7 @@ const productos2 = [
   },
   {
     id: 15,
-    nombre: "Cineraria",
+    nombre: "Cineraria Azul",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/10089/10089246_1.jpg?12-06-2023",
     descripcion: "Planta de flores vivas, perfecta para cualquier espacio interior.",
     precio: 16.99,
@@ -124,7 +124,7 @@ const productos2 = [
   },
   {
     id: 16,
-    nombre: "Spathiphyllum",
+    nombre: "Spathiphyllum Blanco",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11249/11249539_1.jpg?20-08-2024",
     descripcion: "Elegante planta con flores blancas, ideal para interiores modernos.",
     precio: 24.00,
@@ -132,7 +132,7 @@ const productos2 = [
   },
   {
     id: 17,
-    nombre: "Planta de Serpiente",
+    nombre: "Lengua de Suegra",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Resistente y purifica el aire, ideal para cualquier hogar.",
     precio: 30.00,
@@ -140,7 +140,7 @@ const productos2 = [
   },
   {
     id: 18,
-    nombre: "Dracaena",
+    nombre: "Dracaena Roja",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/10093/10093154_1.jpg?12-11-2024",
     descripcion: "Planta con hojas alargadas, ideal para interiores decorativos modernos.",
     precio: 28.99,
@@ -156,7 +156,7 @@ const productos2 = [
   },
   {
     id: 20,
-    nombre: "Lavanda",
+    nombre: "Lavanda Fragante",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/10089/10089246_1.jpg?12-06-2023",
     descripcion: "Planta aromática que añade frescura y naturalidad al hogar.",
     precio: 12.00,
@@ -164,7 +164,7 @@ const productos2 = [
   },
   {
     id: 21,
-    nombre: "Geranios",
+    nombre: "Geranio Rosa",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11249/11249539_1.jpg?20-08-2024",
     descripcion: "Planta colorida ideal para exteriores con luz y frescura natural.",
     precio: 8.99,
@@ -172,7 +172,7 @@ const productos2 = [
   },
   {
     id: 22,
-    nombre: "Orquídea",
+    nombre: "Orquidea Blanca",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Planta elegante con flores llamativas, ideal para interiores decorativos.",
     precio: 40.00,
@@ -188,7 +188,7 @@ const productos2 = [
   },
   {
     id: 24,
-    nombre: "Planta Bonsái",
+    nombre: "Bonsai Mini",
     imagen: "https://res.cloudinary.com/fronda/image/upload/f_auto,q_auto,c_fill,g_center,w_702,h_936/productos/fol/11199/11199687_1.jpg?14-02-2024",
     descripcion: "Elegante árbol en miniatura para interiores.",
     precio: 35.00,
